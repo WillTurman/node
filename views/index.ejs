@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="/javascripts/d3.min.js"></script>
+  </head>
+  <body>
+
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <%= standings %>
+		<h2></h2>
+		
+	
+	<div id="chart">
+	<script>
+
+		var color = <%- color %>;
+		var width = <%- d3width %>;
+		var data = <%- standings %>;
+		
+		d3.select("#chart")
+			.style("width", width)
+			.style("background", color);
+
+		var s = <%-standings%>;
+		console.log(s);
+
+	</script> 
+
+	
+  </body>
+</html>
